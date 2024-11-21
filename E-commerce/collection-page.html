@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Styles/collection-page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Styles/general.css">
+    
+</head>
+<body>
+    <nav class="navebar">
+        <div class="logo">
+            Weave The Web
+        </div>
+        <div class="center-side">
+            <div class="home"><a href="index.html">Home</a></div>
+            <div class="collection"><a href="collection-page.html" style="color: rgb(226, 253, 2);">Collection</a></div>
+            <div class="about"><a href="about.html">About</a></div>
+            <div class="contact"><a href="contact-page.html">Contact</a></div>
+        </div>
+        <div class="right-side">
+            <div class="profile">
+                <a href="login-page.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+            </div>
+            <div class="cart">
+                <a class="cart-logo" href="cart-page.html">
+                    <i class="fa fa-shopping-cart"></i>
+                    <div class="cart-items-count">0</div>
+                </a>
+            </div>
+            <!-- <div class="cart">
+                <a href="cart-page.html"><img class="cart-icon" src="https://www.pngkey.com/png/full/231-2317482_white-shopping-cart-png-download-buy-icon-white.png"></a>
+            </div> -->
+        </div>
+    </nav>
+    <div class="menu-icon">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <aside>
+        <div class="filters">
+            <p id="fill">Filters</p>
+            <div class="category">
+                <h5>Categories</h5>
+                <div>
+                    <input class="toogle" type="radio" id="child" name="cate" value="children">
+                    <label for="child">Children</label> <br>
+                    <input class="toogle" type="radio" id="womens" name="cate" value="womens">
+                    <label for="womens">Women</label> <br>
+                    <input class="toogle" type="radio" id="mens" name="cate" value="mens">
+                    <label for="mens">Men</label>
+                    <div>
+                        <button type="button" class="clear-selection-one">
+                            clear selection
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="type">
+                <h5>Types</h5>
+                <div>
+                    <input type="radio" id="top" name="typ" value="top">
+                    <label for="top">Top Wear</label> <br>
+                    <input type="radio" id="bottom" name="typ" value="bottom">
+                    <label for="bottom">Bottom Wear</label>
+                    <div>
+                        <button type="button" class="clear-selection-two">
+                            clear selection
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- aniket -->
+     <div class="sidebar-menu">
+        <i class="fa fa-bars sidebar-menu-icon" aria-hidden="true"></i>
+     </div>
+     <div class="item-container">
+        <div class="all-collection">
+            <div class="all">All</div>
+            <div class="all">Collections &mdash;&mdash;</div>
+        </div>
+
+        <div class="items-grid-container">
+        
+            <!-- <div class="item" data-js-item="${value.name}">
+                <div class="latest-image img" style="padding: 0; overflow: hidden; border-radius: 8px;">
+                    <img src="https://i.pinimg.com/236x/51/d7/4b/51d74b3e093e4f8c4191a700579eb2cb.jpg">
+                </div>
+                <div class="name">
+                    Casual Shirts for Men|| Shirt for Men
+                </div>
+                <div class="price">
+                    &#8377;419
+                </div>
+    
+                <div class="add-to-cart-button-container">
+                    <button class="add-to-cart-button" data-product-name="${value.name}">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item" data-js-item="${value.name}">
+                <div class="latest-image img" style="padding: 0; overflow: hidden; border-radius: 8px;">
+                    <img src="https://i.pinimg.com/236x/51/d7/4b/51d74b3e093e4f8c4191a700579eb2cb.jpg">
+                </div>
+                <div class="name">
+                    Casual Shirts for Men|| Shirt for Men
+                </div>
+                <div class="price">
+                    &#8377;419
+                </div>
+    
+                <div class="add-to-cart-button-container">
+                    <button class="add-to-cart-button" data-product-name="${value.name}">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item" data-js-item="${value.name}">
+                <div class="latest-image img" style="padding: 0; overflow: hidden; border-radius: 8px;">
+                    <img src="https://i.pinimg.com/236x/51/d7/4b/51d74b3e093e4f8c4191a700579eb2cb.jpg">
+                </div>
+                <div class="name">
+                    Casual Shirts for Men|| Shirt for Men
+                </div>
+                <div class="price">
+                    &#8377;419
+                </div>
+    
+                <div class="add-to-cart-button-container">
+                    <button class="add-to-cart-button" data-product-name="${value.name}">Add to Cart</button>
+                </div>
+            </div> -->
+        </div>
+     </div>
+     <!-- aniket -->
+
+
+     <script type="module" src="script/collection-page.js"></script>
+</body>
+</html>
