@@ -4,6 +4,8 @@ window.addEventListener('pageshow', function(event) {
     }
 });
 
+
+
 // import { menuIcon } from "./script.js";
 import {updateCartCount} from '../Js-files/cart.js';
 updateCartCount();
@@ -50,3 +52,35 @@ export function menuIcon() {
 }
 
 menuIcon();
+
+let loginStatus = true;
+let login = document.querySelector('.login-container>:first-child');
+let forgotPassword = document.querySelector('.forgot-pasword');
+let createAccount = document.querySelector('.create-account');
+let passwordInput = document.querySelector('.password-input-container input');
+let confirmPassword = document.querySelector('.password-confirm-container');
+let signInButton = document.querySelector('.sign-in-button');
+
+if (login){
+    createAccount.addEventListener('click', ()=>{
+        if (loginStatus){
+            login.innerHTML = 'Sign Up &mdash;&ndash;';
+            forgotPassword.innerHTML = 'Already have an account?';
+            passwordInput.placeholder = 'Create Password';
+            confirmPassword.style.display = 'flex';
+            createAccount.innerHTML = 'Login';
+            signInButton.innerHTML = 'Sign Up';
+            loginStatus = false;
+        }
+        else{
+            login.innerHTML = 'Login &mdash;&ndash;';
+            passwordInput.placeholder = 'Password';
+            confirmPassword.style.display = 'none';
+            forgotPassword.innerHTML = 'Forgot your password?';
+            createAccount.innerHTML = 'Create Account';
+            signInButton.innerHTML = 'Sign In';
+            loginStatus = true;
+        }
+    })
+    
+}
