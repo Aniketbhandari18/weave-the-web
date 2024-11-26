@@ -62,6 +62,8 @@ export function displayProduct(selectedProduct, arrName){
         </div>
     `;
 
+    document.title = matchingitem.name;
+
     // generatedHtml += `
     //     <img src="${matchingitem.img}">
     //     <div>${matchingitem.name}</div>
