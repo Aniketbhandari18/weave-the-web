@@ -15,10 +15,17 @@ import {menuIcon as navBarMenu} from "../script/login-page.js";
 navBarMenu();
 // import { displayCart } from "./cart-page.js";
 
+// updateCode();
 // Wait for the DOM to load before executing the script
 document.addEventListener('DOMContentLoaded', () => {
     // Initial load of items
     generateHtmlForCollectionPage(all);
+    let category = localStorage.getItem('category');
+    let type = localStorage.getItem('type');
+    if (category === 'women');
+    if (category) document.querySelector(`input[name="cate"][value="${category}"]`).checked = true;
+    if (type) document.querySelector(`input[name="typ"][value="${type}"]`).checked = true;
+    updateCode();
 
     // Event listeners for radio buttons
     let radios = document.querySelectorAll('input[name="cate"]');
@@ -51,6 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function updateCode(){
     let category = document.querySelector('input[name="cate"]:checked');
     let type = document.querySelector('input[name="typ"]:checked');
+    // console.log(category.value);
+    // console.log(type);
+
+    if (category) localStorage.setItem('category', category.value);
+    if (type) localStorage.setItem('type', type.value);
 
     if (category){
         if (type){
@@ -133,6 +145,8 @@ function clearSelection(name) {
     radio.forEach((value) => {
         value.checked = false; // Uncheck all radio buttons
     });
+    localStorage.removeItem('category');
+    localStorage.removeItem('type');
 }
 
 function callGenerateHtmlForOne(radio){ 
